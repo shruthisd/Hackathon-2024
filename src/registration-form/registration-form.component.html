@@ -1,0 +1,65 @@
+<div>
+    <form>
+        <h3> Welcome! Enroll with voice print</h3>
+        <mat-card>
+            <mat-card-content>
+                <mat-form-field>
+                    
+                    <input placeholder="Name" type="text" matInput formControlName="name">
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+        
+        <mat-card>
+            <mat-card-content>
+                <mat-form-field>
+                    
+                    <input placeholder="LAN ID" type="text" matInput formControlName="name">
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-content>
+                <mat-form-field>
+                    
+                    <input placeholder="LOB" type="text" matInput formControlName="name">
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title> Voice Print Registration</mat-card-title>
+                
+              </mat-card-header>
+            <mat-card-content>
+                
+                    
+                    <p>This a 2024 Global Hackathon challenge implementation by team Initiators. The voice print recorded here helps in speaker recognition</p>
+                
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-stroked-button color="accent" (click)=startRecording()>Record</button>
+              </mat-card-actions>
+        </mat-card>
+
+    
+    </form>
+
+    <div class="content" role="main">
+
+        <div class="row justify-content-center pt-2 pb-2">
+          <button title="Click here to start recording action" class="btn-mic w-auto" (click)="startRecording()"
+            *ngIf="!isRecording" style="margin-right: 3px;">
+            <img src="../../assets/mic.png" />
+          </button>
+          <button title="Click here to stop recording" class="btn-stop w-auto" (click)="stopRecording()" *ngIf="isRecording"
+            style="margin-right: 3px;">
+            <img src="../../assets/stop.png" />
+          </button>
+        </div>
+        <audio #audioPlayer controls style="margin: 10px;"></audio>
+        
+      </div>
+</div>
